@@ -1,0 +1,51 @@
+aid: alterna-savings
+url: https://raw.githubusercontent.com/api-evangelist/alterna-savings/refs/heads/main/apis.yml
+name: Alterna Savings
+kind: company
+description: >-
+  Alterna Savings and Credit Union Limited is a member-owned financial
+  cooperative (credit union) founded in 1908 as the Civil Service Savings and
+  Loan Society, headquartered in Ottawa, Ontario and regulated provincially by
+  the Financial Services Regulatory Authority of Ontario (FSRAO). It is one of
+  Ontario's largest credit unions, serving roughly 217,000 members with about
+  C$10.8 billion in assets across branches in Ontario, and operates the
+  federally regulated direct-banking subsidiary Alterna Bank, one of Canada's
+  earliest digital-first banks. Alterna offers personal and business banking,
+  mortgages, lending, investments and insurance. Consistent with Canada's
+  voluntary, not-yet-operational Consumer-Driven Banking framework (legislated
+  in Budget 2024 / Fall Economic Statement 2024 with the FCAC as overseer),
+  Alterna Savings exposes NO public first-party developer portal or documented
+  API. Digital access is delivered through its online and mobile banking apps
+  and the Interac e-Transfer consumer rail; any third-party data access today is
+  aggregator/screen-scraping based rather than a first-party API. This is an
+  identity-only record with an honest no-public-API posture.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Credit Union
+- Cooperative
+- Consumer-Driven Banking
+- Interac
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.alterna.ca/
+- type: TermsOfService
+  url: https://www.alterna.ca/en/legal
+- type: PrivacyPolicy
+  url: https://www.alterna.ca/en/privacy-and-security
+- type: Support
+  url: https://www.alterna.ca/en/about-us/contact-us
+- type: Blog
+  url: https://www.alterna.ca/en/personal/resource-centre/advice-for-life-blog
+- type: LinkedIn
+  url: https://www.linkedin.com/company/alternasavings
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,70 @@
+aid: alterna-savings
+name: Alterna Savings
+review:
+  question: Does Alterna Savings expose a public first-party developer portal or documented API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Alterna Savings and Credit Union Limited — a member-owned Ontario credit
+    union (FSRAO-regulated, ~217,000 members, ~C$10.8B assets) with the
+    federally regulated Alterna Bank direct-banking subsidiary — publishes NO
+    public developer portal and NO documented public API. A DNS probe of
+    developer.alterna.ca fails to resolve (ENOTFOUND), and no api.alterna.ca or
+    /developers surface is documented on the main site. No OpenAPI/Swagger,
+    GraphQL, or other machine-readable API definition is publicly downloadable,
+    so no spec was harvested. Digital access is delivered through Alterna's
+    consumer online and mobile banking apps. The only shared payment rail
+    surfaced publicly is Interac e-Transfer, offered as an in-app consumer
+    feature rather than an exposed API. Alterna is not a documented FDX
+    participant and publishes no stated position on Canada's Consumer-Driven
+    Banking framework, which is legislated (Budget 2024 / Fall Economic
+    Statement 2024, FCAC as overseer) but not yet operational. Consistent with
+    most Canadian credit unions, any third-party consumer data access today is
+    aggregator/screen-scraping based (Flinks, Plaid, MX, Salt Edge) rather than
+    a first-party API. This is an honest identity-only (no-public-API) record.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalProbe:
+      url: https://developer.alterna.ca
+      result: DNS ENOTFOUND (does not resolve)
+    downloadableSpecs: false
+    specProvenance: none
+    authModel: none-documented
+    fdxParticipant: false
+    cdbPosture: none-published (framework legislated but not yet operational)
+    aggregatorAccess: likely aggregator/screen-scraping (Flinks/Plaid/MX/Salt Edge); not documented by institution
+    canadianRails:
+      interacETransfer: consumer feature in online banking (not an API)
+      realTimeRail: not documented
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API is documented for Alterna Savings.
+    - protocol: OpenAPI
+      documented: false
+      note: No OpenAPI/Swagger definition is publicly available; nothing harvested.
+  charter:
+    type: credit union (financial cooperative)
+    ownership: member-owned co-op
+    founded: 1908
+    regulator: Financial Services Regulatory Authority of Ontario (FSRAO)
+    headquarters: Ottawa, Ontario, Canada
+    subsidiary: Alterna Bank (federally regulated direct-banking subsidiary)
+sources:
+  - url: https://www.alterna.ca/
+    type: Website
+    note: Institution overview; member-first cooperative; no developer/API content.
+  - url: https://developer.alterna.ca
+    type: DeveloperPortalProbe
+    note: DNS does not resolve (ENOTFOUND) — no developer portal exists at this host.
+  - url: https://www.alterna.ca/en/personal/accounts/ways-to-bank/online-banking
+    type: Documentation
+    note: Online banking includes Interac e-Transfer; no API, aggregation, or data-sharing program mentioned.
+  - url: https://en.wikipedia.org/wiki/Alterna_Savings
+    type: Reference
+    note: Charter, founding (1908), FSRAO regulation, ~217,000 members, ~C$10.8B assets, Alterna Bank subsidiary.
+  - url: https://www.alterna.ca/en/legal
+    type: TermsOfService
+    note: Legal & Regulatory hub (account agreements, service fees, voluntary codes).
