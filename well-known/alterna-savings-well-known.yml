@@ -1,0 +1,47 @@
+generated: '2026-07-23'
+method: searched
+source: live probes of https://www.alterna.ca/.well-known/* and https://www.alternabank.ca/.well-known/*
+note: >-
+  The only machine-readable well-known documents Alterna publishes are the
+  OAuth2/OpenID Connect authorization-server metadata (plus JWKS) emitted by the
+  Umbraco CMS "Delivery API" member-security surface that powers the marketing
+  website's member login. There is NO banking/developer API here — the Umbraco
+  content and swagger endpoints are disabled (404), and no api.alterna.ca or
+  developer portal resolves. security.txt, api-catalog and ai-plugin.json are
+  all absent (404). The identical surface exists on the Alterna Bank host.
+hosts:
+- host: www.alterna.ca
+  entries:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: alterna-savings-openid-configuration.json
+    type: OpenIDConnect
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: alterna-savings-oauth-authorization-server.json
+    type: OAuthAuthorizationServer
+  - path: /.well-known/jwks
+    status: 200
+    file: alterna-savings-jwks.json
+    type: JWKS
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: www.alternabank.ca
+  entries:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: Identical Umbraco Delivery API member-security metadata (issuer https://www.alternabank.ca/); not separately saved.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+  - path: /.well-known/security.txt
+    status: 404
+    file: null

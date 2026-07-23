@@ -1,0 +1,14 @@
+generated: '2026-07-23'
+method: searched
+source: https://www.alterna.ca/.well-known/openid-configuration
+note: >-
+  OAuth2/OIDC scopes advertised by the Umbraco CMS Delivery API member-security
+  authorization server (website member login). These are the standard OIDC
+  baseline scopes, not banking/data-access scopes — Alterna exposes no
+  first-party banking API and documents no data-sharing scopes.
+scheme: umbraco_member_oidc
+scopes:
+- name: openid
+  description: Standard OpenID Connect scope; requests an ID token identifying the authenticated site member.
+- name: offline_access
+  description: Requests a refresh token so the client can obtain new access tokens without re-authenticating the member.

@@ -30,10 +30,20 @@ tags:
 - Interac
 - Data Aggregation
 created: '2026-07-23'
-modified: '2026-07-23'
+modified: '2026-07-23T18:00:00Z'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/alterna-savings-domain-security.yml
+- type: WellKnown
+  url: well-known/alterna-savings-well-known.yml
+- type: Authentication
+  url: authentication/alterna-savings-authentication.yml
+- type: OpenIDConnect
+  url: well-known/alterna-savings-openid-configuration.json
+- type: OAuthScopes
+  url: scopes/alterna-savings-scopes.yml
 - type: Website
   url: https://www.alterna.ca/
 - type: TermsOfService
